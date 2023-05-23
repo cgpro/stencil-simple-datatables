@@ -13,7 +13,6 @@ export const config: Config = {
 			empty: true,
 			dir: 'public',
 			esmLoaderPath: '../loader',
-			copy: [{ src: 'img' }],
 		},
 		{
 			type: 'docs-readme',
