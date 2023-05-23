@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+		<title>simple-datatables & stencil.js</title>
+		<!-- some super simple base styles, borrowed from -->
+		<link href="sen.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<!-- include wc: my-table-component -->
+		<script type="module" src="public/bundle/bundle.esm.js" defer></script>
+
+		<!-- version "outside" of a web component" -->
+		<div class="working">
+			<h2>Outside of a web component</h2>
+			<table id="myTableOutsideWc">
+				<thead>
+					<tr>
+						<th><b>N</b>ame</th>
+						<th>Ext.</th>
+						<th>City</th>
+						<th>Start Date</th>
+						<th>Completion</th>
+						<th>numbers</th>
+						<th>german date</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Unity Pugh</td>
+						<td>9958</td>
+						<td>Curicó</td>
+						<td data-sort="20050211">2005/02/11</td>
+						<td>37%</td>
+						<td>1</td>
+						<td data-sort="20231001">01.10.2023</td>
+					</tr>
+					<tr>
+						<td>Theodore Duran</td>
+						<td>8971</td>
+						<td>Dhanbad</td>
+						<td data-sort="19990407">1999/04/07</td>
+						<td>97%</td>
+						<td>10</td>
+						<td data-sort="20231101">01.11.2023</td>
+					</tr>
+					<tr>
+						<td>Kylie Bishop</td>
+						<td>3147</td>
+						<td>Norman</td>
+						<td data-sort="20050908">2005/09/08</td>
+						<td>63%</td>
+						<td>5</td>
+						<td data-sort="20241001">01.10.2024</td>
+					</tr>
+					<tr>
+						<td>Willow Gilliam</td>
+						<td>3497</td>
+						<td>Amqui</td>
+						<td data-sort="20092911">2009/29/11</td>
+						<td>30%</td>
+						<td>48</td>
+						<td data-sort="20201001">01.10.2020</td>
+					</tr>
+					<tr>
+						<td>Unity Pugh</td>
+						<td>9958</td>
+						<td>Curicó</td>
+						<td data-sort="20050211">2005/02/11</td>
+						<td>37%</td>
+						<td>1</td>
+						<td data-sort="20231001">01.10.2023</td>
+					</tr>
+					<tr>
+						<td>Theodore Duran</td>
+						<td>8971</td>
+						<td>Dhanbad</td>
+						<td data-sort="19990407">1999/04/07</td>
+						<td>97%</td>
+						<td>10</td>
+						<td data-sort="20231101">01.11.2023</td>
+					</tr>
+					<tr>
+						<td>Kylie Bishop</td>
+						<td>3147</td>
+						<td>Norman</td>
+						<td data-sort="20050908">2005/09/08</td>
+						<td>63%</td>
+						<td>5</td>
+						<td data-sort="20241001">01.10.2024</td>
+					</tr>
+					<tr>
+						<td>Willow Gilliam</td>
+						<td>3497</td>
+						<td>Amqui</td>
+						<td data-sort="20092911">2009/29/11</td>
+						<td>30%</td>
+						<td>48</td>
+						<td data-sort="20201001">01.10.2020</td>
+					</tr>
+					<tr>
+						<td>Unity Pugh</td>
+						<td>9958</td>
+						<td>Curicó</td>
+						<td data-sort="20050211">2005/02/11</td>
+						<td>37%</td>
+						<td>1</td>
+						<td data-sort="20231001">01.10.2023</td>
+					</tr>
+					<tr>
+						<td>Theodore Duran</td>
+						<td>8971</td>
+						<td>Dhanbad</td>
+						<td data-sort="19990407">1999/04/07</td>
+						<td>97%</td>
+						<td>10</td>
+						<td data-sort="20231101">01.11.2023</td>
+					</tr>
+					<tr>
+						<td>Kylie Bishop</td>
+						<td>3147</td>
+						<td>Norman</td>
+						<td data-sort="20050908">2005/09/08</td>
+						<td>63%</td>
+						<td>5</td>
+						<td data-sort="20241001">01.10.2024</td>
+					</tr>
+					<tr>
+						<td>Willow Gilliam</td>
+						<td>3497</td>
+						<td>Amqui</td>
+						<td data-sort="20092911">2009/29/11</td>
+						<td>30%</td>
+						<td>48</td>
+						<td data-sort="20201001">01.10.2020</td>
+					</tr>
+					<tr>
+						<td>Unity Pugh</td>
+						<td>9958</td>
+						<td>Curicó</td>
+						<td data-sort="20050211">2005/02/11</td>
+						<td>37%</td>
+						<td>1</td>
+						<td data-sort="20231001">01.10.2023</td>
+					</tr>
+					<tr>
+						<td>Theodore Duran</td>
+						<td>8971</td>
+						<td>Dhanbad</td>
+						<td data-sort="19990407">1999/04/07</td>
+						<td>97%</td>
+						<td>10</td>
+						<td data-sort="20231101">01.11.2023</td>
+					</tr>
+					<tr>
+						<td>Kylie Bishop</td>
+						<td>3147</td>
+						<td>Norman</td>
+						<td data-sort="20050908">2005/09/08</td>
+						<td>63%</td>
+						<td>5</td>
+						<td data-sort="20241001">01.10.2024</td>
+					</tr>
+					<tr>
+						<td>Willow Gilliam</td>
+						<td>3497</td>
+						<td>Amqui</td>
+						<td data-sort="20092911">2009/29/11</td>
+						<td>30%</td>
+						<td>48</td>
+						<td data-sort="20201001">01.10.2020</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<!-- version web component -->
+		<my-table-component>
+			<h2>Within my-table-component</h2>
+			<table id="myTableWc">
+				<thead>
+					<tr>
+						<th><b>N</b>ame</th>
+						<th>Ext.</th>
+						<th>City</th>
+						<th>Start Date</th>
+						<th>Completion</th>
+						<th>numbers</th>
+						<th>german date</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Unity Pugh</td>
+						<td>9958</td>
+						<td>Curicó</td>
+						<td data-sort="20050211">2005/02/11</td>
+						<td>37%</td>
+						<td>1</td>
+						<td data-sort="20231001">01.10.2023</td>
+					</tr>
+					<tr>
+						<td>Theodore Duran</td>
+						<td>8971</td>
+						<td>Dhanbad</td>
+						<td data-sort="19990407">1999/04/07</td>
+						<td>97%</td>
+						<td>10</td>
+						<td data-sort="20231101">01.11.2023</td>
+					</tr>
+					<tr>
+						<td>Kylie Bishop</td>
+						<td>3147</td>
+						<td>Norman</td>
+						<td data-sort="20050908">2005/09/08</td>
+						<td>63%</td>
+						<td>5</td>
+						<td data-sort="20241001">01.10.2024</td>
+					</tr>
+					<tr>
+						<td>Willow Gilliam</td>
+						<td>3497</td>
+						<td>Amqui</td>
+						<td data-sort="20092911">2009/29/11</td>
+						<td>30%</td>
+						<td>48</td>
+						<td data-sort="20201001">01.10.2020</td>
+					</tr>
+					<tr>
+						<td>Unity Pugh</td>
+						<td>9958</td>
+						<td>Curicó</td>
+						<td data-sort="20050211">2005/02/11</td>
+						<td>37%</td>
+						<td>1</td>
+						<td data-sort="20231001">01.10.2023</td>
+					</tr>
+					<tr>
+						<td>Theodore Duran</td>
+						<td>8971</td>
+						<td>Dhanbad</td>
+						<td data-sort="19990407">1999/04/07</td>
+						<td>97%</td>
+						<td>10</td>
+						<td data-sort="20231101">01.11.2023</td>
+					</tr>
+					<tr>
+						<td>Kylie Bishop</td>
+						<td>3147</td>
+						<td>Norman</td>
+						<td data-sort="20050908">2005/09/08</td>
+						<td>63%</td>
+						<td>5</td>
+						<td data-sort="20241001">01.10.2024</td>
+					</tr>
+					<tr>
+						<td>Willow Gilliam</td>
+						<td>3497</td>
+						<td>Amqui</td>
+						<td data-sort="20092911">2009/29/11</td>
+						<td>30%</td>
+						<td>48</td>
+						<td data-sort="20201001">01.10.2020</td>
+					</tr>
+					<tr>
+						<td>Unity Pugh</td>
+						<td>9958</td>
+						<td>Curicó</td>
+						<td data-sort="20050211">2005/02/11</td>
+						<td>37%</td>
+						<td>1</td>
+						<td data-sort="20231001">01.10.2023</td>
+					</tr>
+					<tr>
+						<td>Theodore Duran</td>
+						<td>8971</td>
+						<td>Dhanbad</td>
+						<td data-sort="19990407">1999/04/07</td>
+						<td>97%</td>
+						<td>10</td>
+						<td data-sort="20231101">01.11.2023</td>
+					</tr>
+					<tr>
+						<td>Kylie Bishop</td>
+						<td>3147</td>
+						<td>Norman</td>
+						<td data-sort="20050908">2005/09/08</td>
+						<td>63%</td>
+						<td>5</td>
+						<td data-sort="20241001">01.10.2024</td>
+					</tr>
+					<tr>
+						<td>Willow Gilliam</td>
+						<td>3497</td>
+						<td>Amqui</td>
+						<td data-sort="20092911">2009/29/11</td>
+						<td>30%</td>
+						<td>48</td>
+						<td data-sort="20201001">01.10.2020</td>
+					</tr>
+					<tr>
+						<td>Unity Pugh</td>
+						<td>9958</td>
+						<td>Curicó</td>
+						<td data-sort="20050211">2005/02/11</td>
+						<td>37%</td>
+						<td>1</td>
+						<td data-sort="20231001">01.10.2023</td>
+					</tr>
+					<tr>
+						<td>Theodore Duran</td>
+						<td>8971</td>
+						<td>Dhanbad</td>
+						<td data-sort="19990407">1999/04/07</td>
+						<td>97%</td>
+						<td>10</td>
+						<td data-sort="20231101">01.11.2023</td>
+					</tr>
+					<tr>
+						<td>Kylie Bishop</td>
+						<td>3147</td>
+						<td>Norman</td>
+						<td data-sort="20050908">2005/09/08</td>
+						<td>63%</td>
+						<td>5</td>
+						<td data-sort="20241001">01.10.2024</td>
+					</tr>
+					<tr>
+						<td>Willow Gilliam</td>
+						<td>3497</td>
+						<td>Amqui</td>
+						<td data-sort="20092911">2009/29/11</td>
+						<td>30%</td>
+						<td>48</td>
+						<td data-sort="20201001">01.10.2020</td>
+					</tr>
+				</tbody>
+			</table>
+		</my-table-component>
+	</body>
+</html>

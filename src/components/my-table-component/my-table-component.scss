@@ -1,0 +1,14 @@
+@use '~simple-datatables/dist/style.css';
+
+.working,
+my-table-component {
+	padding: 20px;
+}
+.working {
+	background: #e9ffec;
+}
+
+my-table-component {
+	display: block;
+	background: #ffe9e9;
+}

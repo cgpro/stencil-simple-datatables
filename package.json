@@ -1,0 +1,39 @@
+{
+	"name": "my-table-component",
+	"version": "0.0.1",
+	"description": "my-table-component Web Component",
+	"main": "public/index.cjs.js",
+	"module": "public/index.js",
+	"es2015": "public/esm/index.mjs",
+	"es2017": "public/esm/index.mjs",
+	"types": "public/types/index.d.ts",
+	"collection": "public/collection/collection-manifest.json",
+	"collection:main": "public/collection/index.js",
+	"unpkg": "public/my-table-component/my-table-component.esm.js",
+	"files": [
+		"public/"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/cgpro/stencil-simple-datatables"
+	},
+	"scripts": {
+		"build": "export NODE_ENV=production && stencil build --docs",
+		"prod": "npm run build --docs-readme",
+		"dev": "npm run prod && npm run start",
+		"start": "export NODE_ENV=development && stencil build --dev --watch --serve",
+		"test": "stencil test --spec --e2e",
+		"test.watch": "stencil test --spec --e2e --watchAll",
+		"generate": "stencil generate"
+	},
+	"dependencies": {
+		"@stencil/core": "3.2.2",
+		"simple-datatables": "^7.2.0"
+	},
+	"license": "MIT",
+	"devDependencies": {
+		"@stencil/sass": "^3.0.2",
+		"@stencil/store": "^2.0.6",
+		"@types/node": "^20.2.3"
+	}
+}
